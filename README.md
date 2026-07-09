@@ -1,5 +1,7 @@
 # ⚽ Sofascore AI
 
+![Dashboard do projeto](assets/dashboard.png)
+
 Sistema web de análise de jogadores da Premier League utilizando dados do Sofascore.
 
 ## 🚀 Tecnologias utilizadas
