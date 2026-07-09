@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Sofascore AI</title>
+
+    <style>
+
+        body{
+            background:#0f172a;
+            color:white;
+            font-family:Arial;
+            padding:40px;
+        }
+
+        h1{
+            text-align:center;
+            margin-bottom:30px;
+        }
+
+        form{
+            display:flex;
+            justify-content:center;
+            gap:10px;
+            margin-bottom:40px;
+        }
+
+        input{
+            width:400px;
+            padding:15px;
+            border:none;
+            border-radius:10px;
+            background:#1e293b;
+            color:white;
+            font-size:16px;
+        }
+
+        button{
+            padding:15px 25px;
+            border:none;
+            border-radius:10px;
+            background:#22c55e;
+            color:white;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        .card{
+            background:#1e293b;
+            padding:20px;
+            border-radius:15px;
+            margin-bottom:20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>⚽ Sofascore AI</h1>
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="pergunta"
+            placeholder="Quem tem mais gols?"
+            required
+        >
+
+        <button type="submit">
+            Pesquisar
+        </button>
+
+    </form>
+
+    <h2>{{ titulo }}</h2>
+
+    {% for item in resultados %}
+
+        <div class="card">
+
+            <h2>{{ item[0] }}</h2>
+
+            <p>Time: {{ item[1] }}</p>
+
+            <p>Estatística: {{ item[2] }}</p>
+
+        </div>
+
+    {% endfor %}
+
+</body>
+
+</html>
+</html>
