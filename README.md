@@ -1,8 +1,8 @@
 # ⚽ Sofascore AI
 
-Sistema de análise de jogadores utilizando Python, Flask e SQLite.
+Sistema web de análise de jogadores da Premier League utilizando dados do Sofascore.
 
-## 🚀 Tecnologias
+## 🚀 Tecnologias utilizadas
 
 - Python
 - Flask
@@ -13,18 +13,25 @@ Sistema de análise de jogadores utilizando Python, Flask e SQLite.
 
 ## 📊 Funcionalidades
 
-- Coleta automática de dados do Sofascore
+- Coleta de dados do Sofascore
+- Armazenamento em banco SQLite
 - Ranking de artilheiros
 - Ranking de melhores notas
-- Interface web
-- Banco de dados SQLite
+- Interface web para consultas
+- Dashboard simples e responsivo
 
-## ▶️ Como executar
+## 🖥️ Como executar
 
 Clone o projeto:
 
 ```bash
-git clone https://github.com/thiagovolpolini-art/projetosofascore-ai.git
+git clone https://github.com/thiagovolpolini-art/sofascore-ai.git
+```
+
+Entre na pasta:
+
+```bash
+cd sofascore-ai
 ```
 
 Instale as dependências:
@@ -33,21 +40,50 @@ Instale as dependências:
 pip install -r requirements.txt
 ```
 
-Execute:
+Instale os navegadores do Playwright:
+
+```bash
+python -m playwright install
+```
+
+Crie o banco:
 
 ```bash
 python database.py
+```
+
+Colete os dados:
+
+```bash
 python playwright_test.py
+```
+
+Execute o sistema:
+
+```bash
 python app_web.py
 ```
 
-Depois abra:
+Acesse no navegador:
 
+```text
 http://127.0.0.1:5000
+```
+
+## 📌 Exemplos de perguntas
+
+```text
+quem tem mais gols
+```
+
+```text
+melhor jogador
+```
+
+```text
+maior nota
+```
 
 ## 👨‍💻 Autor
 
-Thiago Volpolini
-
-GitHub:
-https://github.com/thiagovolpolini-art
+Desenvolvido por Thiago Volpolini.
